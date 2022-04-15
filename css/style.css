@@ -1,0 +1,449 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #07040C;
+    --white: #FFFFFF;
+    --red  : #EE1C1C;
+    --gray : #C6C6C6;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: var(--black);
+    position        : fixed;
+    min-width       : 100%;
+    z-index         : 1;
+}
+
+.flex {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.top-nav {
+    overflow: hidden;
+}
+
+.top-nav a {
+    color         : var(--white);
+    text-transform: uppercase;
+    display       : block;
+    float         : left;
+    padding       : 14px 16px;
+    text-align    : center;
+    font-size     : 1.1em;
+}
+
+.top-nav a:hover {
+    background-color: var(--red);
+    color           : var(--white);
+    transition      : all 0.4s;
+    cursor          : pointer;
+}
+
+.search-container {
+    float   : right;
+    overflow: hidden;
+}
+
+.search-container a {
+    padding: 14px 16px;
+}
+
+.principal-box {
+    height: 100vh;
+}
+
+.container-principal {
+    background-image   : linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 100%), url(../images/band.jpg);
+    background-size    : cover;
+    background-position: center;
+    height             : 100vh;
+    color              : var(--white);
+    font-size          : 2.5em;
+}
+
+.container-principal h1 {
+    animation  : myText 5s;
+    font-weight: normal;
+}
+
+@keyframes myText {
+    from {
+        font-size: 1em;
+    }
+
+    to {
+        font-size: 2em;
+    }
+}
+
+.container-band {
+    width         : 50%;
+    margin        : 5% auto;
+    flex-direction: column;
+}
+
+.text-title {
+    text-align    : center;
+    margin        : 3%;
+    font-weight   : normal;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+}
+
+.container-band .text-band {
+    color        : var(--gray);
+    text-align   : center;
+    margin-bottom: 2%;
+    font-style   : italic;
+    font-weight  : 500;
+}
+
+.container-band p:nth-child(3) {
+    text-align   : justify;
+    margin-bottom: 5%;
+    line-height  : 1.8em;
+}
+
+.container-imgs p {
+    text-align   : center;
+    margin-bottom: 3%;
+}
+
+.card-imgs img {
+    width  : 100%;
+    filter : grayscale(100%);
+    padding: 0 5%;
+}
+
+.container-discography {
+    width           : 100%;
+    text-align      : center;
+    background-color: var(--black);
+    color           : var(--white);
+    flex-direction  : column;
+    padding         : 2%;
+}
+
+.container-discography__albuns {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-around;
+    width          : 80%;
+}
+
+.card-album {
+    width        : 20%;
+    margin-bottom: 3%;
+}
+
+.card-album img {
+    width: 100%;
+}
+
+.card-album p {
+    margin-bottom : 4%;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.container-discography .btn-link {
+    padding         : 14px 16px;
+    text-transform  : uppercase;
+    color           : var(--white);
+    background-color: var(--red);
+    letter-spacing  : 0.1em;
+}
+
+.container-discography .btn-link:hover {
+    background-color: var(--white);
+    color           : var(--black);
+    cursor          : pointer;
+    transition      : all 0.4s;
+}
+
+.container-gallery {
+    display       : flex;
+    flex-direction: column;
+}
+
+.container-gallery .gallery {
+    display        : flex;
+    flex-wrap      : wrap;
+    padding        : 0 4px;
+    justify-content: center;
+}
+
+.gallery .column {
+    max-width: 25%;
+    flex     : 25%;
+    padding  : 0 4px;
+}
+
+.gallery .column img {
+    width         : 100%;
+    margin-top    : 8px;
+    vertical-align: middle;
+}
+
+.container-tour {
+    width           : 100%;
+    background-color: var(--black);
+    flex-direction  : column;
+    margin          : 2% 0;
+    color           : var(--white);
+}
+
+.text-tour {
+    margin: -2% 0 2%;
+}
+
+.container-tour .info-tour {
+    min-width       : 40%;
+    background-color: var(--white);
+    color           : var(--black);
+    margin-bottom   : 2%;
+}
+
+.container-tour .info-tour p {
+    padding      : 2%;
+    border-bottom: 1px solid var(--gray);
+    color        : var(--gray);
+}
+
+.container-tour .info-tour p span {
+    background-color: var(--red);
+    padding         : 1%;
+    margin-left     : 2%;
+    color           : var(--black);
+}
+
+.container-tour .cards-tour {
+    flex-direction: row;
+    max-width     : 80%;
+    margin-bottom : 2%;
+}
+
+.cards-tour .cards-item {
+    width           : 25%;
+    display         : flex;
+    flex-direction  : column;
+    margin          : 0 1%;
+    background-color: var(--white);
+    color           : var(--blackF);
+}
+
+.cards-item img {
+    filter: grayscale(100%);
+    width : 100%;
+}
+
+.cards-item .cards-item__texts {
+    color        : var(--black);
+    padding      : 5%;
+    margin-bottom: 5%;
+}
+
+.cards-item .cards-item__texts p:nth-child(1) {
+    font-weight: 600;
+}
+
+.cards-item .cards-item__texts p:nth-child(2) {
+    margin: 5% 0;
+    color : var(--gray);
+}
+
+.cards-item .cards-item__texts p:nth-child(3) {
+    font-size: 0.9em;
+    margin   : 12% 0;
+}
+
+.cards-item .cards-item__texts a {
+    background-color: var(--black);
+    padding         : 8px 16px;
+    width           : 100%;
+    color           : var(--white);
+    transition      : all 0.4s;
+}
+
+.cards-item .cards-item__texts a:hover {
+    background-color: var(--red);
+}
+
+.container-contact {
+    flex-direction: column;
+}
+
+.container-contact .box-contact {
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+    text-align    : center;
+    width         : 80%;
+}
+
+.box-contact__text p {
+    margin: 2%;
+}
+
+.box-contact__text p i {
+    padding-right: 3%;
+}
+
+.box-contact .box-contact__text {
+    width: 50%;
+}
+
+.box-contact .box-contact__form {
+    display       : flex;
+    flex-direction: column;
+    width         : 50%;
+    align-items   : center;
+}
+
+.box-contact .box-contact__form input {
+    width  : 70%;
+    margin : 1%;
+    padding: 10px 16px;
+    border : 1px solid var(--gray);
+}
+
+.box-contact__form a {
+    background-color: var(--black);
+    color           : var(--white);
+    width           : 70%;
+    padding         : 12px 16px;
+    transition      : all 0.5s;
+}
+
+.box-contact__form a:hover {
+    background-color: var(--red);
+}
+
+footer {
+    background-color: var(--black);
+    text-align      : center;
+    color           : var(--white);
+    margin-top      : 5%;
+    padding         : 8%;
+}
+
+.footer-links a {
+    padding  : 1%;
+    font-size: xx-large;
+    color    : var(--white);
+    display  : inline-block;
+}
+
+.footer-links a:hover {
+    background-color: var(--red);
+}
+
+footer p {
+    margin-top: 1%;
+    font-size : 0.9em;
+}
+
+@media screen and (max-width: 600px) {
+    .top-nav {
+        position: inherit;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .top-nav,
+    .search-container {
+        float: none;
+    }
+
+    .top-nav a,
+    .search-container a {
+        float     : none;
+        display   : block;
+        width     : 100%;
+        text-align: center;
+    }
+
+    .container-band {
+        width  : 100%;
+        padding: 3%;
+    }
+
+    .container-band .container-imgs {
+        flex-direction: column;
+    }
+
+    .container-discography {
+        padding: 5%;
+    }
+
+    .container-discography__albuns {
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+    }
+
+    .container-discography__albuns .card-album {
+        width: 100%;
+    }
+
+    .container-discography .btn-link {
+        margin-top: 8%;
+    }
+
+    .gallery .column {
+        flex     : 100%;
+        max-width: 100%;
+    }
+
+    .container-tour {
+        padding: 2%;
+    }
+
+    .container-tour .info-tour {
+        width: 100%;
+    }
+
+    .container-tour .cards-tour {
+        flex-direction: column;
+    }
+
+    .cards-tour .cards-item {
+        width : 100%;
+        margin: 2% 0;
+    }
+
+    .container-contact .box-contact {
+        flex-direction: column;
+        width         : 100%;
+    }
+
+    .box-contact .box-contact__text,
+    .box-contact .box-contact__form {
+        width: 100%;
+    }
+
+    .box-contact .box-contact__form input,
+    .box-contact__form a {
+        width: 90%;
+    }
+
+    .footer-links a {
+        font-size: x-large;
+    }
+}
